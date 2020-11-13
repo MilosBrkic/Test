@@ -24,7 +24,19 @@ try{
   
   // message if connected to the PostgreSQL successfully
   if($conn){
-  echo "Connected to the database successfully!";
+  echo "\nConnected to the database successfully!";
+
+
+  $sql = "CREATE TABLE IF NOT EXISTS sampleTable (
+    id serial PRIMARY KEY,
+    sampleField character varying(20) NOT NULL UNIQUE
+    )";
+  
+  
+  $conn->exec($sql);
+
+
+
   }
   }catch (PDOException $e){
   // should there be an error lets get that and show it to the user.
@@ -33,15 +45,7 @@ try{
 
 
 
-$sql = "CREATE TABLE TestTable (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-firstname VARCHAR(30) NOT NULL,
-lastname VARCHAR(30) NOT NULL,
-email VARCHAR(50)
-)";
 
-
-$conn->exec($sql);
 
 /*if ($baza->query($sql) === TRUE) {
   echo "Table MyGuests created successfully";
