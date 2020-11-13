@@ -6,11 +6,11 @@ $mysql_pass = getenv('DB_PASS');//"45ce463f833fa692c92c999d76e3fa90d6ede3341d927
 $mysql_db = getenv('DB_NAME');//"dfpi1aenr4h0j7";
 
 echo $mysql_server;
-echo "\n<br>"
+echo "\n<br>";
 echo $mysql_user;
-echo "\n<br>"
+echo "\n<br>";
 echo $mysql_pass;
-echo "\n<br>"
+echo "\n<br>";
 echo $mysql_db;
 
 //$baza = pg_connect("host=$mysql_server port=5432 dbname=$mysql_db user=$mysql_user password=$mysql_pass");
